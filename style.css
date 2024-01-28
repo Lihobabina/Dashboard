@@ -1,0 +1,221 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+}
+.dashboard{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25%;
+    background-color: #ffffff;
+    padding: 15px 15px 50px 15px;
+    box-shadow: 0px 10px 60px 0px #E2ECF980;
+}
+.aside_row{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-bottom: 25px;
+}
+.aside_row > h1{
+    font-size: 26px;
+    font-weight: 600;
+}
+.aside_row > h1 > span{
+    font-size: 10px;
+    color: #838383;
+    font-weight: 400;
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.nav_li{
+    list-style: none;
+    border-radius: 8px;
+    padding: 7px;
+    transition: all ease 0.1s;
+}
+.nav_a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #9197B3;
+    font-weight: 400;
+}
+.nav_a > span{
+    flex: 1 0 0;
+}
+.nav_icon{
+    margin-right: 10px;
+}
+.nav_li-active{
+    background-color: #5932EA;
+}
+.nav_li-active > .nav_a{
+    color: #fff;
+}
+.aside_bottom{
+    display: flex;
+    column-gap: 10px;
+}
+.aside_bottom-bl > span{
+    font-weight: 400;
+    color: #757575;
+    font-size: 12px;
+}
+main{
+    width: 79%;
+    background-color: #FAFBFF;
+    padding: 25px 50px 50px 50px;
+}
+main > h1{
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+.main_board{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0px 10px 60px 0px #E2ECF980;
+}
+.main_row, .main_row-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main_row-bl{
+    display: flex;
+    flex-direction: column;
+}
+.main_row-bl > h2{
+    font-size: 22px;
+    font-weight: 600;
+}
+.main_row-bl > span{
+    font-weight: 400;
+    color: #16C098;
+}
+.main_row-search{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #f9fbff;
+    color: #B5B7C0;
+    font-weight: 400;
+    font-size: 12px;
+}
+.table-cont{
+    overflow-x: auto;
+    margin: 25px 0;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+   td {
+    padding: 20px 8px;
+    border-bottom: 1px solid #EEEEEE;
+    font-weight: 500;
+  }
+  
+  th {
+    padding: 8px;
+    color: #B5B7C0;
+    text-align: left;
+    border-bottom: 1px solid #EEEEEE;
+    font-weight: 500;
+  }
+.active, .inactive {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+    border-radius: 4px;
+    padding: 3px 0;
+  }
+.active{
+    color: #008767;
+    border: 1px solid #00B087;
+    background-color: #16C09861;
+}
+.inactive {
+    color: #DF0404;
+    border: 1px solid #DF0404;
+    background-color: #FFC5C5;
+  }
+.main_row-bottom > p{
+    color: #B5B7C0;
+}
+.main_row-pagination{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.main_row-pagination-bl{
+    width: 26px;
+    height: 24px;
+    border: 1px solid #EEEEEE;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #404B52;
+}
+.main_row-pagination-bl.active{
+    background-color: #5932EA;
+    color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+    body{
+        font-size: 11px;
+    }
+    .aside{
+        display: none;
+    }
+    main{
+        width: 100%;
+        padding: 25px 15px;
+    }
+    .main_row-bl > h2{
+        font-size: 16px;
+    }
+    .main_row-search > img{
+        height: 11px;
+    }
+    .main_board{
+        padding: 15px;
+    }
+    .main_row-search{
+        width: 35%;
+    }
+    main > h1{
+        margin-bottom: 20px;
+    }
+    .main_row-bottom{
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
